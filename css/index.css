@@ -56,14 +56,14 @@ background-size: cover; position: relative; top:0; left:0;}
 
 /* 섹션 Footwear */
 
-#footwear { width: 100%; padding: 84px 0 0;  }
+#footwear { width: 100%; height: auto; padding: 84px 0 0;  }
 
 .footwear_wrap { width: 100%; height: auto; }
 
 .footwear_wrap h2 {margin: 0 56px 24px;}
 
 /* .footwear_wrap h2 span {display: block;} */
-.footwear_ul_scroll {width: 100%; overflow-y: scroll; padding-bottom: 30px;}
+.footwear_ul_scroll {width: 100%; overflow-x: scroll; padding-bottom: 30px;}
 .footwear_ul { width: 300%;  display: flex;   }
 
 .footwear_ul li { width:30vw; position: relative; margin: 0 16px 0 0;  }
@@ -73,9 +73,140 @@ background-size: cover; position: relative; top:0; left:0;}
 
 .footwear_ul li img { width: 100%;}
 
-.footwear_ul li h3 {margin: 12px 0 0 0; font-size: 16px; line-height: 24px; display: flex; justify-content: space-between; padding:0 16px 0 0;}
+.footwear_ul li div {margin: 12px 0 0 0; font-size: 16px; line-height: 24px; display: flex; justify-content: space-between; padding:0 16px 0 0;}
 
-.footwear_ul li p { color:rgb(117,117,117);} 
+.footwear_ul li div p span {display: block;}
+.footwear_ul li div p span:first-child { color:rgb(17,17,17);} 
+.footwear_ul li div p span:last-child { color:rgb(117,117,117);} 
+
+/* 섹션 basketball */
+
+#basketball { width: 100%; height: auto; padding: 84px 56px 0;  }
+
+.basketball_wrap { width: 100%; height: auto; }
+
+.basketball_wrap h2 {margin: 0 0 24px;}
+
+.basketball_ul { width: 100%;  display: flex; justify-content: space-between;  }
+
+.basketball_ul li { width: calc(50% - 8px);  height:700px;   position: relative;  }
+
+.basketball_ul li:nth-child(1) { 
+   background: url(../img/basketball_1.jpg) center center no-repeat; background-size: cover;
+}
+
+.basketball_ul li:nth-child(2) { 
+   background: url(../img/basketball_2.jpg) center center no-repeat; background-size: cover;
+}
+
+
+.basketball_li_title {  position: absolute; left:36px; bottom: 36px; color:white;}
+
+.basketball_li_title p {margin: 0 0 20px; font-size: 20px; line-height: 24px;}
+
+/* section - toppick */
+
+#toppick { width: 100%; height: auto; padding: 84px 0 0;  }
+
+.toppick_wrap { width: 100%; height: auto; }
+
+.toppick_wrap h2 {margin: 0 0 24px 56px;}
+
+.toppick_ul_scroll {
+   width: 100%;
+   padding: 0 48px;
+}
+.toppick_ul { width: 100%;  display: flex; justify-content: space-between;  }
+
+.toppick_ul li { width: 33.3333%;  height:auto; padding: 0 8px;  position: relative;  }
+
+.toppick_ul li img {
+   width: 100%;
+}
+
+.toppick_ul li p {
+   margin: 16px 0 0 0;
+}
+
+/* section - memberjoin */
+
+#membership {
+   width: 100%;
+   height: auto;
+   padding: 84px 56px 0;
+}
+
+.membership_wrap {
+   width: 100%;
+   height: 500px;
+   text-align: center;
+}
+
+.membership_wrap a {
+   width: 100%;
+   height: 100%;
+   display: block;
+   background: url(../img/membership_1792.jpg) no-repeat center center;
+   background-size: cover;
+   box-sizing: border-box;
+}
+
+.membership_button {
+   text-align: center;
+   padding: 420px 0 0;
+}
+
+.button_black {
+   width:112px; 
+   height: 40px; 
+   background: rgb(17,17,17); 
+   color:white; 
+   border:none; 
+   border-radius: 20px; 
+   cursor: pointer; 
+   margin: 6px 6px 0 0 ; 
+   font-size: 16px;
+}
+
+/* section - menulink */
+
+#menulink {
+   width: 100%;
+   height: auto;
+   padding: 84px 56px 40px;
+}
+
+.menulink_wrap {
+   width: 880px;
+   max-height: 180px;
+   overflow-y: hidden;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   transition: max-height 0.4s;
+}
+
+.menulink_wrap:hover {
+   max-height: 1200px;
+}
+
+.menulink_ul {
+   width: 184px;
+}
+
+.menulink_ul li {
+   margin: 0 0 12px;
+}
+
+.menulink_ul li:first-child {
+   font-weight: 600;
+   margin: 0 0 24px;
+}
+
+.menulink_ul li a {
+   color: rgb(117,117,117);
+}
+
 
 /* 모바일 반응형 CSS */
 
@@ -90,6 +221,53 @@ background-size: cover; position: relative; top:0; left:0;}
 
    #trending { padding: 84px 20px 0 ; }
    .trending_ul li { height:500px; }
+
+   .footwear_ul { width: 3098px; }
+   .footwear_ul li { width:330px; position: relative; margin: 0 16px 0 0;  }
+
+   .footwear_ul li div {margin: 12px 0 0 0; font-size: 16px; line-height: 24px; display: flex; justify-content: space-between; padding:0 16px 0 0; flex-direction: column;}
+
+   #basketball { padding: 84px 20px 0 ; }
+   .basketball_ul li { height:500px; }
+
+   #toppick { padding: 84px 0 0 ; }
+   .toppick_wrap h2 {margin: 0 0 24px 20px;}
+   .toppick_ul_scroll {width: 100%; padding: 0; overflow-x: scroll;}
+
+   .toppick_ul li { width: 346px; }
+   .toppick_ul li img { width: 330px; }
+
+   .toppick_ul li:first-child { margin: 0 0 0 12px; }
+
+   #menulink {
+      width: 100%;
+      height: auto;
+      padding: 84px 20px 40px;
+   }
+   
+   .menulink_wrap {
+      width: 100%;
+      max-height: 180px;
+      overflow-y: hidden;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      transition: max-height 0.4s;
+   }
+   
+   .menulink_wrap:hover {
+      max-height: 1200px;
+   }
+   
+   .menulink_ul {
+      width: 25%;
+   }
+
+   .menulink_ul li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
 
 }
 
@@ -131,10 +309,84 @@ background-size: cover; position: relative; top:0; left:0;}
       background: url(../img/trending_2_m.jpg) center center no-repeat; background-size: cover;
    }
 
+   .footwear_ul { width: 2828px; }
+   .footwear_ul li { width:300px; position: relative; margin: 0 16px 0 0;  }
+
+   #basketball { padding: 84px 20px 0 ; }
+
+   .basketball_ul { height:auto; flex-wrap: wrap; }
+
+   .basketball_ul li {width: 100%; height:500px; margin: 0 0 8px 0; }
+
+   .basketball_li_title { left:24px; bottom: 24px; }
+
+   #toppick { padding: 84px 0 0 ; }
+   .toppick_wrap h2 {margin: 0 0 24px 20px;}
+   .toppick_ul_scroll {width: 100%; padding: 0; overflow-x: scroll;}
+
+   .toppick_ul li { width: 316px; }
+   .toppick_ul li img { width: 300px; }
+
+   .toppick_ul li:first-child { margin: 0 0 0 12px; }
+
+   #membership {
+      width: 100%;
+      height: auto;
+      padding: 84px 20px 0;
+   }
+
+   .membership_wrap a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url(../img/membership_748.jpg) no-repeat center center;
+      background-size: cover;
+      box-sizing: border-box;
+   }
+
+   .membership_button {
+      text-align: left;
+      padding: 420px 0 0 30px;
+   }
+
+   #menulink {
+      width: 100%;
+      height: auto;
+      padding: 84px 20px 40px;
+   }
+   
+   .menulink_wrap {
+      width: 100%;
+      max-height: 1800px;
+      overflow-y: hidden;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      transition: max-height 0.4s;
+   }
+   
+   .menulink_wrap:hover {
+      max-height: 1600px;
+   }
+   
+   .menulink_ul {
+      width: 100%;
+      overflow-y: hidden; max-height: 40px; 
+      margin: 0 0 20px 0;
+      transition: max-height 0.4s;
+   }
+
+   .menulink_ul li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+   }
+
+
 }
 
 @media screen and (max-width:446px) {
-   .hero_wrap_title h2 br {display: block;
-   
-   }
+   .hero_wrap_title h2 br { display: block; }
 }
